@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9" />
+    <!--The viewport meta tag is used to improve the presentation and behavior of the samples 
+      on iOS devices-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title>Locu Prototype</title>
+    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.2/js/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.2/js/esri/css/esri.css" />
+    <script type="text/javascript" src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=3.2"></script>
+  <style>
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0; 
+        padding: 0;
+        overflow:hidden;
+      }
+      #leftPane{
+        width:220px;
+        font-size:12px;
+      }
+      #map{
+        padding:0;
+      }
+      /*#content {
+      width: 400px; height: 750px; padding: 5px; overflow: auto;
+      border: solid 2px #AAAAAA; background-color: #FFFFFF;
+      -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px;
+      -moz-box-shadow: 0 0 0.5em black; -webkit-box-shadow: 0 0 0.5em black; -o-box-shadow: 0 0 0.5em black; box-shadow: 0 0 0.5em black;*/
+    }
+    .failure { color: red; }
+    #status { font-size: 12px; }
+    </style>
+
+  <script type="text/javascript">
+    var dojoConfig = { isDebug: true };
+  </script>
+  <script type="text/javascript" src="scripts/locu.js"></script>
+    
+</head>
+
+<body style="font-family: Arial Unicode MS,Arial,sans-serif;">
+  
+  <div id="leftPane" dojotype="dijit.layout.ContentPane">
+    <button onclick="getLocu();" dojoType="dijit.form.Button" >Hit Locu</button>
+    <a href="http://locu.com"><img height="25" width="155" src="http://locu.com/static/images/dev/poweredby-color@2x.png" alt="Powered by Locu" /></a>
+  </div>
+  <div dojotype="dijit.layout.BorderContainer">
+      <div id="map" dojotype="dijit.layout.ContentPane">
+     </div>
+    </div>
+</body>
+
+</html>
