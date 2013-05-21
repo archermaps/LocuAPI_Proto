@@ -19,7 +19,7 @@
       map.addLayer(locuLayer);
       mapRef = map.spatialReference;
       esri.config.defaults.io.proxyUrl = "http://barndoor/proxy.php";
-      dojo.connect(map, 'onLoad', function(theMap) {
+      dojo.connect(map, 'onLoad', function(theMap){
         //resize the map when the browser resizes
         dojo.connect(dijit.byId('map'), 'resize', map,map.resize);
       });
@@ -94,6 +94,6 @@
         locuLayer.add(graphic);
         var lLayer = locuLayer;
       }));
-      dojo.hitch
+      //dojo.hitch
     }
     
