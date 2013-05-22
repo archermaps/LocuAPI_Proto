@@ -1,7 +1,7 @@
     dojo.require("esri.map");
     dojo.require("dijit.layout.BorderContainer");
     dojo.require("dijit.layout.ContentPane");
-
+//github test
     var map;
     var mapRef, locuLayer, infoTemplate;
 
